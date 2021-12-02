@@ -25,13 +25,7 @@ export class AuthService {
 
     this.router.navigate(['login']);
   }
-  // login({email,password}:any):Observable<any>{
-  //   if(email=='admin' && password=='123'){
-  //     this.setToken('asdfasdfasdf');
-  //     return of({name:'nasar',email:"nasar@gmail.com"});
-  //   }
-  //   return throwError(new Error("failed to login"));
-  // }
+  
   _url = 'http://localhost:3000/admin/login/adminlogin';
   login(user): Observable<any> {
     return this.http.post<any>(this._url, user);
@@ -150,6 +144,13 @@ export class AuthService {
         'x-auth-token':this.token
       })
     });
+  }
+  getSpecificBatches(id):Observable<any>{
+    return this.http.get<any>(this.getBatches +"/"+id,{
+      headers:new HttpHeaders({
+        'x-auth-token':this.token
+      })
+    })
   }
 
 

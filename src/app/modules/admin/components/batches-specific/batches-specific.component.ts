@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-batches-specific',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BatchesSpecificComponent implements OnInit {
 
-  constructor() { }
+  constructor(private auth:AuthService,private router:ActivatedRoute) { }
 
+  batch:any;
+  id:string;
   ngOnInit(): void {
+    this.id=this.router.snapshot.paramMap.get("id");
+
+    this.auth.getSpecificBatches(this.id).subscribe(response=>{
+      console.log(response);
+    },error=>{
+      console.log(error);
+    })
   }
 
 }
