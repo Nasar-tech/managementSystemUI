@@ -1,0 +1,15 @@
+ .active{
+    border:1px solid red;
+    color:indigo;
+}
+li:hover{
+    border:1px solid rgb(255, 0, 234);
+    color:indigo;
+    
+}
+li{
+    margin:10px;
+    font-size: larger;
+    font-weight: 700;
+    color:indigo
+} 

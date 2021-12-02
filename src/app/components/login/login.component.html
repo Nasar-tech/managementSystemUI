@@ -1,0 +1,57 @@
+<br />
+<br />
+<br />
+
+<div class="container">
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <div class="fadeIn first">
+        <br />
+        <i class="fas fa-5x fa-user-lock"></i>
+        <br />
+        <h2>Admin Login</h2>
+      </div>
+
+      <form [formGroup]="loginForm" (ngSubmit)="formSubmit()">
+        <input
+          formControlName="email"
+          type="email"
+          id="login"
+          class="fadeIn second"
+          name="login"
+          placeholder="login"
+        /><br />
+        <div *ngIf="email.invalid && email.touched">
+          <small class="text-danger" *ngIf="email.errors?.required"> * Required</small><br/>
+          <small class="text-danger" *ngIf="email.errors?.minlength"> * min length error</small><br/>
+          <small class="text-danger" *ngIf="email.errors?.email"> * invalid email</small>
+
+        </div>
+        
+
+        <input
+          formControlName="password"
+          type="password"
+          id="password"
+          class="fadeIn third"
+          name="password"
+          placeholder="password"
+        />
+
+        <br />
+        <div *ngIf="password.invalid && password.touched">
+          <small class="text-danger" *ngIf="password.errors?.required"> * Required</small>
+          <small class="text-danger" *ngIf="password.errors?.minlength"> * min length error</small>
+        </div>
+
+        <input [disabled]="!loginForm.valid" type="submit" class="btn btn-primary" />
+      </form>
+
+      <div id="formFooter">
+        <a class="underlineHover" routerLink="/home"
+          >Back to Home</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,151 @@
+<br />
+<br />
+<br />
+<br />
+
+<div *ngIf="faculty">
+  <div class="container">
+    <div class="row">
+      <div class="col-10">
+        <div>
+          <form #facultyForm="ngForm" (ngSubmit)="updateFaculty()">
+            {{ facultyForm.value | json }}
+            <hr />
+
+            <div class="form-group">
+              <label for="facultyName">Faculty id</label>
+              <input
+                name="id"
+                [(ngModel)]="faculty.id"
+
+                disabled
+                type="text"
+                class="form-control"
+                id="facultyName"
+                aria-describedby="emailHelp"
+                placeholder="Faculty Name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="facultyName">Faculty Name</label>
+              <input
+                name="facultyName"
+                [(ngModel)]="faculty.facultyName"
+
+                required
+                #fname="ngModel"
+                [class.is-invalid]="fname.invalid && fname.touched"
+                minlength="3"
+
+
+
+                type="text"
+                class="form-control"
+                id="facultyName"
+                aria-describedby="emailHelp"
+                placeholder="Faculty Name"
+              />
+              
+
+              <div>
+                <small *ngIf="fname.errors?.required" class="text-danger">* Required</small>
+                <small *ngIf="fname.errors?.minlength" class="text-danger">* invalid length</small>
+              </div>
+
+
+
+
+            </div>
+            <div class="form-group">
+              <label for="facultyEmail">Faculty Email</label>
+              <input
+                name="email"
+                [(ngModel)]="faculty.email"
+
+
+
+                required
+                #femail="ngModel"
+                [class.is-invalid]="femail.invalid && femail.touched"
+                pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+
+
+                type="email"
+                class="form-control"
+                id="facultyEmail"
+                aria-describedby="emailHelp"
+                placeholder="Faculty Email"
+              />
+              <div>
+                <small *ngIf="femail.errors?.required" class="text-danger">* Required</small>
+                <small *ngIf="femail.errors?.pattern" class="text-danger">* invalid email pattern</small>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password">Faculty Password</label>
+              <input
+                name="password"
+                [(ngModel)]="faculty.password"
+
+
+                required
+                #fpassword="ngModel"
+                [class.is-invalid]="fpassword.invalid && fpassword.touched"
+                minlength="3"
+
+                type="password"
+                class="form-control"
+                id="password"
+                aria-describedby="emailHelp"
+                placeholder="Faculty Password"
+              />
+              <div>
+                <small *ngIf="fpassword.errors?.required" class="text-danger"> * Required</small>
+                <small *ngIf="fpassword.errors?.minlength" class="text-danger"> * Invalid length</small>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="number">Faculty Number</label>
+              <input
+                name="number"
+                [(ngModel)]="faculty.number"
+
+
+                required
+                #fnumber="ngModel"
+                [class.is-invalid]="fnumber.invalid && fnumber.touched"
+                minlength="5"
+
+
+
+
+                type="email"
+                class="form-control"
+                id="number"
+                aria-describedby="emailHelp"
+                placeholder="Faculty Number"
+              />
+              <div>
+                <small *ngIf="fnumber.errors?.required" class="text-danger"> * Required</small>
+                <small *ngIf="fnumber.errors?.minlength" class="text-danger"> * Invalid number</small>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="facultyBatches">Alloted Batches</label>
+              <input
+                name="allotedBatches"
+                [(ngModel)]="faculty.allotedBatches"
+                type="text"
+                class="form-control"
+                id="facultyBatches"
+                placeholder="Alloted Batches"
+              />
+            </div>
+            <button type="submit" [disabled]="facultyForm.invalid" class="btn btn-secondary">Update</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

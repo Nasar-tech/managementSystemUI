@@ -1,0 +1,44 @@
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="/"></a>
+
+    <!-- <img src="./highqlabs2.jpeg" style="width:100px;height:60px" alt=""> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin/home" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin/students" routerLinkActive="active">Students</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin/faculty" routerLinkActive="active">Faculty</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin/courses" routerLinkActive="active">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin/batches" routerLinkActive="active">Upcoming Batches</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin/interviews" routerLinkActive="active">Interview Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin/services" routerLinkActive="active">service</a>
+        </li>
+        
+        <li class="nav-item">
+          <button class="nav-link btn btn-danger" (click)="logout()">Logout</button>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+  
+  
+

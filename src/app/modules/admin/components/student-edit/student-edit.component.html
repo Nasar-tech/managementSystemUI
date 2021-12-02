@@ -1,0 +1,170 @@
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+<div *ngIf="fetchedStudent">
+    <div class="container">
+      <div class="row">
+        <div class="col-10">
+          <div>
+              <form #studentForm="ngForm" (ngSubmit)="updateStudent()">
+                  
+  
+              <div class="form-group">
+                <label for="studentName">student Id</label>
+                <input
+                  name="id"
+                  disabled
+                  [(ngModel)]="student.id"
+                  type="text"
+                  class="form-control"
+                  id="id"
+                  aria-describedby="emailHelp"
+                  placeholder="student id"
+                />
+              </div>
+              <div class="form-group">
+                <label for="studentName">student name</label>
+                <input
+                  name="firstName"
+                  
+                  [(ngModel)]="student.firstName"
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  aria-describedby="emailHelp"
+                  placeholder="student Name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="lastName">student last name</label>
+                <input
+                  name="lastName"
+                  
+                  [(ngModel)]="student.lastName"
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  aria-describedby="emailHelp"
+                  placeholder="student Name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="gender">student gender</label>
+                <input
+                  name="gender"
+                  
+                  [(ngModel)]="student.gender"
+                  type="text"
+                  class="form-control"
+                  id="gender"
+                  aria-describedby="emailHelp"
+                  placeholder="student Name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="qualification">student qualification</label>
+                <input
+                  name="qualification"
+                  
+                  [(ngModel)]="student.qualification"
+                  type="text"
+                  class="form-control"
+                  id="qualification"
+                  aria-describedby="emailHelp"
+                  placeholder="student Name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="percentage">student percentage</label>
+                <input
+                  name="percentage"
+                  
+                  [(ngModel)]="student.percentage"
+                  type="text"
+                  class="form-control"
+                  id="percentage"
+                  aria-describedby="emailHelp"
+                  placeholder="student Name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="passout">student passout</label>
+                <input
+                  name="passout"
+                  
+                  [(ngModel)]="student.passout"
+                  type="text"
+                  class="form-control"
+                  id="passout"
+                  aria-describedby="emailHelp"
+                  placeholder="student Name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="address">student address</label>
+                <input
+                  name="address"
+                  
+                  [(ngModel)]="student.address"
+                  type="text"
+                  class="form-control"
+                  id="address"
+                  aria-describedby="emailHelp"
+                  placeholder="student Name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="number">student number</label>
+                <input
+                  name="number"
+                  
+                  [(ngModel)]="student.number"
+                  type="text"
+                  class="form-control"
+                  id="number"
+                  aria-describedby="emailHelp"
+                  placeholder="student Name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">student email</label>
+                <input
+                  name="email"
+                  
+                  [(ngModel)]="student.email"
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  aria-describedby="emailHelp"
+                  placeholder="student Name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">student password</label>
+                <input
+                  name="password"
+                  
+                  [(ngModel)]="student.password"
+                  type="text"
+                  class="form-control"
+                  id="password"
+                  aria-describedby="passwordHelp"
+                  placeholder="student Name"
+                />
+              </div>
+
+             
+  
+             
+              
+              <button type="submit" class="btn btn-secondary">Update</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

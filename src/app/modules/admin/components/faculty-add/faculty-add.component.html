@@ -1,0 +1,135 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<br />
+<br />
+<br />
+<div class="container">
+  
+
+  <form [formGroup]="registrationForm" (ngSubmit)="createFaculty()">
+    <h2>Faculty Registration Form</h2>
+
+    
+    <div class="form-group">
+      <label for="exampleInputEmail1">Faculty Name</label>
+      <input
+        [class.is-invalid]="facultyName.invalid && facultyName.touched"
+        formControlName="facultyName"
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Enter Faculty Name"
+      />
+      <div *ngIf="facultyName.invalid && facultyName.touched">
+        <small *ngIf="facultyName.errors?.required">Required</small>
+        <small *ngIf="facultyName.errors?.minlength">min length error</small>
+        <small *ngIf="facultyName.errors?.forbiddenname">admin is not available</small
+        >
+      </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Faculty Email</label>
+      <input
+        [class.is-invalid]="email.invalid && email.touched"
+        formControlName="email"
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Enter Faculty Email"
+      />
+      <div *ngIf="email.invalid && email.touched">
+        <small *ngIf="email.errors?.required">Required</small>
+        <small *ngIf="email.errors?.pattern">Invalid Email id ..!</small>
+      </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Faculty Number</label>
+      <input
+        [class.is-invalid]="number.invalid && number.touched"
+        formControlName="number"
+        type="tel"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Enter Faculty Mobile Number"
+      />
+      <div *ngIf="number.invalid && number.touched">
+        <small *ngIf="number.errors?.required">Required</small>
+        <small *ngIf="number.errors?.minlength">min length error</small>
+      </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">password</label>
+      <input
+        formControlName="password"
+        [class.is-invalid]="password.invalid && password.touched"
+        type="password"
+        class="form-control"
+        id="password"
+        aria-describedby="password"
+        placeholder="Enter password"
+      />      
+       <div *ngIf="password.invalid && password.touched">
+        <small *ngIf="password.errors?.required">Required..!</small>
+        <small *ngIf="password.errors?.minlength">min length error</small>
+      </div>
+    </div>
+
+
+    <div class="form-group">      
+      <label for="exampleInputEmail1">Confirm Password</label>
+      <input
+        [class.is-invalid]="cpassword.invalid&&cpassword.touched"
+        formControlName="cpassword"
+        type="password"
+        class="form-control"
+        id="cpassword"
+        aria-describedby="password"
+        placeholder="Confirm password"
+      /> 
+      <div *ngIf="cpassword.errors?.required && cpassword.touched">
+        <small>Required</small>
+      </div>
+      <div *ngIf="registrationForm.errors?.misMatch">
+        <small>Password did not match</small>
+      </div>
+    </div>
+
+
+
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Alloted Faculty Batch</label>
+      <input      
+        formControlName="allotedBatchId"
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Enter Batch id"
+      />
+    </div>
+
+
+    <button 
+      type="submit"
+      [disabled]="!registrationForm.valid"
+      class="btn btn-primary"
+    >
+      Register
+    </button>
+  </form>
+</div>

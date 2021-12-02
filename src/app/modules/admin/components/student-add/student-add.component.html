@@ -1,0 +1,236 @@
+<br />
+<br />
+<br />
+<br />
+
+<div class="container">
+  <h1>Add Student</h1>
+  <hr />
+  <hr />
+  <div class="row">
+    <div class="col-10">
+      <form [formGroup]="registrationForm" (ngSubmit)="createStudent()">
+        <h2>Students Registration Form</h2>
+        <hr />
+
+        <div class="form-group">
+          <label for="firstName">Student First Name</label>
+          <input
+            required
+            minlength="3"
+            [class.is-invalid]="firstName.invalid && firstName.touched"
+            formControlName="firstName"
+            type="text"
+            class="form-control"
+            id="firstName"
+            aria-describedby="emailHelp"
+            placeholder="Enter first Name"
+          />
+          <div *ngIf="firstName.invalid && firstName.touched">
+            <small class="text-danger" *ngIf="firstName.errors?.required"
+              >Required</small
+            >
+            <small class="text-danger" *ngIf="firstName.errors?.minlength"
+              >min length error</small
+            >
+            <small class="text-danger" *ngIf="firstName.errors?.forbiddenname"
+              >admin is not available</small
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="lastName">last name</label>
+          <input
+            required
+            minlength="3"
+            [class.is-invalid]="lastName.invalid && lastName.touched"
+            formControlName="lastName"
+            type="text"
+            class="form-control"
+            id="lastName"
+            aria-describedby="emailHelp"
+            placeholder="Enter Faculty last name"
+          />
+          <div *ngIf="lastName.invalid && lastName.touched">
+            <small class="text-danger" *ngIf="lastName.errors?.required"
+              >Required</small
+            >
+            <small class="text-danger" *ngIf="lastName.errors?.minlength"
+              >Invalid length name ..!</small
+            >
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="gender">gender</label>
+          <input            
+            formControlName="gender"
+            type="text"
+            class="form-control"
+            id="gender"
+            placeholder="Please select 'M' or 'F'"
+          />
+          <div *ngIf="gender.invalid && gender.touched">
+            <small *ngIf="gender.errors.required" class="text-danger"
+              >* required</small
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="qualification">qualification</label>
+          <input
+            required
+            formControlName="qualification"
+            [class.is-invalid]="qualification.invalid && qualification.touched"
+            type="text"
+            class="form-control"
+            id="qualification"
+            placeholder="Enter qualification like . MCA or B.Sc or B.Tech"
+          />
+          <div *ngIf="qualification.invalid && qualification.touched">
+            <small *ngIf="qualification.errors?.required">Required..!</small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="qualification">percentage</label>
+          <input
+            formControlName="percentage"
+            type="text"
+            class="form-control"
+            id="percentage"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="qualification">passout</label>
+          <input
+            formControlName="passout"
+            type="text"
+            class="form-control"
+            id="passout"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input
+            required
+            minlength="3"
+            [class.is-invalid]="address.invalid && address.touched"
+            formControlName="address"
+            type="text"
+            class="form-control"
+            id="address"
+            placeholder="Enter Address"
+          />
+          <div *ngIf="address.invalid && address.touched">
+            <small class="text-danger" *ngIf="address.errors?.required"
+              >Required..!</small
+            >
+            <small class="text-danger" *ngIf="address.errors?.minlength"
+              >Invalid Address</small
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="number">Number</label>
+          <input
+            required
+            minlength="5"
+            maxlength="10"
+            formControlName="number"
+            type="text"
+            class="form-control"
+            id="number"
+            placeholder="Enter mobile number without country code"
+          />
+          <div *ngIf="number.invalid && number.touched">
+            <small class="text-danger" *ngIf="number.errors?.required"
+              >Required..!</small
+            >
+            <small class="text-danger" *ngIf="number.errors?.maxlength"
+              >Please enter with out country code..!</small
+            >
+            <small class="text-danger" *ngIf="number.errors?.minlength"
+              >Invalid Number</small
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            required
+            minlength="3"
+            pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+            formControlName="email"
+            type="email"
+            class="form-control"
+            id="email"
+            aria-describedby="emailHelp"
+            placeholder="Enter Email"
+          />
+          <div *ngIf="email.invalid && email.touched">
+            <small class="text-danger" *ngIf="email.errors?.required"
+              >Required..!</small
+            >
+            <small class="text-danger" *ngIf="email.errors?.pattern"
+              >Invalid Email..!</small
+            >
+            <small class="text-danger" *ngIf="email.errors?.minlength"
+              >Invalid</small
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            required
+            minlength="3"
+            formControlName="password"
+            type="text"
+            class="form-control"
+            id="password"
+            placeholder="Enter password"
+          />
+          <div *ngIf="password.invalid && password.touched">
+            <small class="text-danger" *ngIf="password.errors?.required"
+              >Required..!</small
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="cpassword">Confirm Password</label>
+          <input
+            required
+            minlength="3"
+            formControlName="cpassword"
+            type="text"
+            class="form-control"
+            id="cpassword"
+            aria-describedby="emailHelp"
+            placeholder="Enter password"
+          />
+          <div *ngIf="registrationForm.errors?.misMatch">
+            <small class="text-danger">Password did not match</small>
+          </div>
+        </div>
+
+        <button
+          [disabled]="!registrationForm.valid"
+          type="submit"
+          class="btn btn-primary"
+        >
+          Register
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

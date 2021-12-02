@@ -1,0 +1,56 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<app-header></app-header>
+
+
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-10">
+
+
+
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Batch Id</th>
+                    <th scope="col">Course Name</th>
+                    <th scope="col">Faculty Name</th>
+                    <th scope="col">Course StartFrom</th>
+                    <th scope="col">Duration In Days</th>
+                    <th scope="col">View Details</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let b of batches">
+                    <th scope="row">{{b.batchId}}</th>
+                    <td>{{b.courseName}}</td>
+                    <td>{{b.facultyName}}</td>
+                    <td>{{b.startFrom}}</td>
+                    <td>{{b.durationInDays}}</td>
+                    
+                    
+                    <td>
+                      <a [routerLink]="['/admin/batch',b.batchId]" class="card-link btn btn-primary">View</a>
+      
+                    </td>
+                    <td>
+                      <a [routerLink]="['/admin/batchEdit',b.batchId]" class="card-link btn btn-secondary">Edit</a>
+      
+                    </td>
+                    <td>
+                      <a [routerLink]="['/admin/batchDelete',b.batchId]" class="card-link btn btn-danger">Delete</a>
+                    </td>
+       
+                    
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

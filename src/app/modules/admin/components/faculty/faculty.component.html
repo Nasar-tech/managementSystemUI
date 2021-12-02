@@ -1,0 +1,93 @@
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+<div class="container">
+  <h2>Total Faculy</h2>
+  <h3>
+    <a routerLink="/admin/addFaculty">
+      <button class="btn btn-primary">Add New Faculty</button>
+    </a>
+  </h3>
+    <div class="row mx-auto">
+
+
+<!-- 
+        <div *ngFor="let f of faculty" class="col-10 col-lg-3 col-md-4 m-4 mt-4">
+            <div class="card" style="width: 18rem;">
+              
+                <img class="card-img-top" src="" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Faculty Name : {{f.facultyName}}</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Faculty Id : {{f.id}}</li>
+                  <li class="list-group-item">Faculty Email : {{f.email}}</li>
+                  <li class="list-group-item">Faculy Number : {{f.number}}</li>
+                  <li class="list-group-item">Faculty Date of Joining<br/> : {{f.dateOfJoin}}</li>
+                  <li class="list-group-item">Faculty Alloted Batch : {{f.allotedBatchId}}</li>
+                </ul>
+                <div class="card-body">
+                  <a [routerLink]="['/admin/faculty',f.id]" class="card-link btn btn-primary">View</a>
+                  <a [routerLink]="['/admin/facultyEdit',f.id]" class="card-link btn btn-secondary">Edit</a>
+                  <a [routerLink]="['/admin/facultyDelete',f.id]" class="card-link btn btn-danger">Delete</a>
+   
+                </div>
+              </div>
+        </div> -->
+
+
+
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">id</th>
+              <th scope="col">email</th>
+              <th scope="col">Number</th>
+              <th scope="col">DOJ</th>
+              <th scope="col">Alloted Batches</th>
+              <th scope="col">View</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let f of faculty">
+              <th scope="row">{{f.facultyName}}</th>
+              <td>{{f.id}}</td>
+              <td>{{f.email}}</td>
+              <td>{{f.number}}</td>
+              <td>{{f.dateOfJoin}}</td>
+              <td>{{f.allotedBatchId}}</td>
+              
+              <td>
+                <a [routerLink]="['/admin/faculty',f.id]" class="card-link btn btn-primary">View</a>
+
+              </td>
+              <td>
+                <a [routerLink]="['/admin/facultyEdit',f.id]" class="card-link btn btn-secondary">Edit</a>
+
+              </td>
+              <td>
+                <a [routerLink]="['/admin/facultyDelete',f.id]" class="card-link btn btn-danger">Delete</a>
+              </td>
+ 
+              
+            </tr>
+          </tbody>
+        </table>
+
+
+
+
+
+    </div>
+  </div> 
+
+  
+
+

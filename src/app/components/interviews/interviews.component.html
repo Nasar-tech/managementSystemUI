@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<br />
+<br />
+<br />
+
+
+<div class="container">
+    <div class="row">
+        <div *ngFor="let i of interviews" class="col-10 col-lg-3 col-md-4 mt-4 m-4">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Company Name : {{i.companyName}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted"> Interview Id : {{i.interviewId}}</h6>
+                  <p class="card-text">Requierd Experience : {{i.experience}}</p>
+                  <p class="card-text">Technology :  {{i.technology}}</p>
+                  <p class="card-text">Job location : {{i.location}}</p>
+                  <a href="#" class="card-link btn btn-success">Apply</a>
+                  <a href="#" class="card-link btn btn-warning">MoreInfo</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+

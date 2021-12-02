@@ -1,0 +1,7 @@
+[
+    {"course":"Java","Duration":"90","Faculty Name":"faculty1","courseImg":""},
+    {"course":"Selenium","Duration":"80","Faculty Name":"faculty2","courseImg":""},
+    {"course":"C#","Duration":"70","Faculty Name":"faculty3","courseImg":""},
+    {"course":"Angular","Duration":"50","Faculty Name":"faculty4","courseImg":""},
+    {"course":"React","Duration":"40","Faculty Name":"faculty5","courseImg":""}
+]

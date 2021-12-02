@@ -1,0 +1,30 @@
+nav{
+    background-color: #2cadd8 !important;
+}
+nav a {
+    color:rgb(0, 0, 0);
+}
+nav a{
+    color: white !important;
+}
+.dropdown-menu{
+    color:black !important;
+    background-color: rgba(0, 0, 0, 0.945) !important;
+}
+
+a:hover {
+    border-radius: 15%;
+
+    background-color: rgb(31, 31, 28);
+}
+.active{
+    border-radius: 15%;
+    background-color:rgba(0, 0, 0, 0.678);
+}
+
+
+
+
+
+/* ******************************************** */
+  
