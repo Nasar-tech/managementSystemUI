@@ -1,0 +1,79 @@
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+<div *ngIf="interview" class="container">
+    <div class="row">
+      <div class="col-10">
+  
+        <form #interviewForm="ngForm" (ngSubmit)="updateInterviews(interviewForm.value)">
+          {{interviewForm.value | json}}
+          <hr/>
+          {{interview |json}}
+        <div class="form-group">
+          <label for="interviewId">Interview Id</label>
+          <input
+              [(ngModel)]="interview['interviewId']"
+              name="interviewId"
+      
+            type="text"
+            class="form-control"
+            id="interviewId"
+            aria-describedby="emailHelp"
+            placeholder="Ex.BAT001 or BAT002.."
+          />
+        </div>
+        <div class="form-group">
+          <label for="companyName">Company Name</label>
+          <input
+          [(ngModel)]="interview.companyName"
+              name="companyName"
+            type="text"
+            class="form-control"
+            id="companyName"
+            placeholder="Course Name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="technology">Technology</label>
+          <input
+          [(ngModel)]="interview.technology"
+              name="technology"
+            type="text"
+            class="form-control"
+            id="technology"
+            placeholder="Enter Faculty Name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="experience">Experience</label>
+          <input
+          [(ngModel)]="interview.experience"
+              name="experience"
+            type="text"
+            class="form-control"
+            id="experience"
+            placeholder="Enter Faculty Name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input
+          [(ngModel)]="interview.location"
+              name="location"
+            type="text"
+            class="form-control"
+            id="location"
+            placeholder="Enter Faculty Name"
+          />
+        </div>
+        
+        
+        
+        <button type="submit" class="btn btn-primary">Create New Batch</button>
+      </form>
+      </div>
+    </div>
+  </div>

@@ -1,6 +1,67 @@
+<br />
+<br />
+<br />
+<br />
 
-<br/>
-<br/>
-<br/>
-<br/>
-<p>batches-add works!</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-10">
+
+      <form #batchForm="ngForm" (ngSubmit)="batchCreate(batchForm.value)">
+        {{batchForm.value | json}}
+      <div class="form-group">
+        <label for="batchId">Batch Id</label>
+        <input
+            ngModel
+            name="batchId"
+    
+          type="text"
+          class="form-control"
+          id="batchId"
+          aria-describedby="emailHelp"
+          placeholder="Ex.BAT001 or BAT002.."
+        />
+      </div>
+      <div class="form-group">
+        <label for="courseName">Coruse Name</label>
+        <input
+        ngModel
+            name="courseName"
+          type="text"
+          class="form-control"
+          id="courseName"
+          placeholder="Course Name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="facultyName">Faculty Name</label>
+        <input
+        ngModel
+            name="facultyName"
+          type="text"
+          class="form-control"
+          id="facultyName"
+          placeholder="Enter Faculty Name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="Duration">Duration in Days</label>
+        <input
+        ngModel
+            name="durationInDays"
+          type="number"
+          class="form-control"
+          id="Duration"
+          placeholder="Enter Days"
+        />
+      </div>
+      
+      
+      <button type="submit" class="btn btn-primary">Create New Batch</button>
+    </form>
+    </div>
+  </div>
+</div>
+
+

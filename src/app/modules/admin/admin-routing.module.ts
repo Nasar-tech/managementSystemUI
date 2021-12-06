@@ -13,6 +13,10 @@ import { FacultyEditComponent } from './components/faculty-edit/faculty-edit.com
 import { FacultyComponent } from './components/faculty/faculty.component';
 import { FacultyspecificComponent } from './components/facultyspecific/facultyspecific.component';
 import { HomeComponent } from './components/home/home.component';
+import { InterviewAddComponent } from './components/interview-add/interview-add.component';
+import { InterviewDeleteComponent } from './components/interview-delete/interview-delete.component';
+import { InterviewEditComponent } from './components/interview-edit/interview-edit.component';
+import { InterviewSpecificComponent } from './components/interview-specific/interview-specific.component';
 import { InterviewsComponent } from './components/interviews/interviews.component';
 import { ServicesComponent } from './components/services/services.component';
 import { StudentAddComponent } from './components/student-add/student-add.component';
@@ -27,22 +31,21 @@ const routes: Routes = [
     {path:'courses',component:CoursesComponent},
     {path:'services',component:ServicesComponent},
 
+
+
+
+
     {path:'faculty',component:FacultyComponent},
     {path:'faculty/:id',component:FacultyspecificComponent},
     {path:'facultyDelete/:id',component:FacultyDeleteComponent},
     {path:'facultyEdit/:id',component:FacultyEditComponent},
     {path:'addFaculty',component:FacultyAddComponent},  
 
-    
     {path:'students',component:StudentsComponent},
     {path:'addStudent',component:StudentAddComponent},
     {path:'student/:id',component:StudentSpecificComponent},
     {path:'studentDelete/:id',component:StudentDeleteComponent},
     {path:'studentEdit/:id',component:StudentEditComponent},
-
-
-
-
 
     {path:'batches',component:BatchesComponent},
     {path:'addBatches',component:BatchesAddComponent},
@@ -56,6 +59,19 @@ const routes: Routes = [
 
 
     {path:'interviews',component:InterviewsComponent},
+    {path:'interview/:id',component:InterviewSpecificComponent},
+    {path:'addInterview',component:InterviewAddComponent},
+    {path:'interviewEdit/:id',component:InterviewEditComponent},
+    {path:'interviewDelete/:id',component:InterviewDeleteComponent},
+
+
+
+
+
+
+
+
+
     {path:'',redirectTo:'/admin/home',pathMatch:"full"},
     {path:"**",component:HomeComponent}
   ]}

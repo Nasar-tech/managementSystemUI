@@ -25,6 +25,10 @@ import { BatchesAddComponent } from './components/batches-add/batches-add.compon
 import { BatchesDeleteComponent } from './components/batches-delete/batches-delete.component';
 import { BatchesEditComponent } from './components/batches-edit/batches-edit.component';
 import { BatchesSpecificComponent } from './components/batches-specific/batches-specific.component';
+import { InterviewAddComponent } from './components/interview-add/interview-add.component';
+import { InterviewDeleteComponent } from './components/interview-delete/interview-delete.component';
+import { InterviewEditComponent } from './components/interview-edit/interview-edit.component';
+import { InterviewSpecificComponent } from './components/interview-specific/interview-specific.component';
 
 
 
@@ -51,7 +55,11 @@ import { BatchesSpecificComponent } from './components/batches-specific/batches-
     BatchesAddComponent,
     BatchesDeleteComponent,
     BatchesEditComponent,
-    BatchesSpecificComponent
+    BatchesSpecificComponent,
+    InterviewAddComponent,
+    InterviewDeleteComponent,
+    InterviewEditComponent,
+    InterviewSpecificComponent
   ],
   imports: [
     CommonModule,FormsModule,

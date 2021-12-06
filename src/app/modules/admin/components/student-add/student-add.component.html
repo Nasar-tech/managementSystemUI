@@ -223,8 +223,173 @@
           </div>
         </div>
 
+        
+       
+
+
+        <div class="form-group">
+          <label for="fatherName">Student Father Name</label>
+          <input
+            required
+            minlength="3"
+            
+            formControlName="fatherName"
+            type="text"
+            class="form-control"
+            id="fatherName"
+            aria-describedby="emailHelp"
+            placeholder="Enter first Name"
+          />
+          
+        </div>
+
+        <div class="form-group">
+          <label for="occupation">Father Occupation</label>
+          <input
+            required
+            minlength="3"
+            
+            formControlName="occupation"
+            type="text"
+            class="form-control"
+            id="occupation"
+            aria-describedby="emailHelp"
+            placeholder="Enter first Name"
+          />          
+        </div>
+
+
+        <div class="form-group">
+          <label for="sscpercentage">SSC Percentage</label>
+          <input
+            required
+            minlength="3"
+            
+            formControlName="sscpercentage"
+            type="text"
+            class="form-control"
+            id="sscpercentage"
+            aria-describedby="emailHelp"
+            placeholder="Enter first Name"
+          />          
+        </div>
+
+
+        <div class="form-group">
+          <label for="interpercentage">Inter / (10+2) Percentage</label>
+          <input
+            required
+            minlength="3"
+            
+            formControlName="interpercentage"
+            type="text"
+            class="form-control"
+            id="interpercentage"
+            aria-describedby="emailHelp"
+            placeholder="Enter first Name"
+          />          
+        </div>
+
+
+        <div class="form-group">
+          <label for="graduationpercentage">Graduation Percentage or (12+)</label>
+          <input
+            required
+            minlength="3"            
+            formControlName="graduationpercentage"
+            type="text"
+            class="form-control"
+            id="graduationpercentage"
+            aria-describedby="emailHelp"
+            placeholder="Enter first Name"
+          />         
+        </div>
+
+
+        <div class="form-group">
+          <label for="pgpercentage">PG (Masters) Percentage</label>
+          <input
+            required
+            minlength="3"            
+            formControlName="pgpercentage"
+            type="text"
+            class="form-control"
+            id="pgpercentage"
+            aria-describedby="emailHelp"
+            placeholder="Enter first Name"
+          />          
+        </div>
+
+
+        <div class="form-group">
+          <label for="doe">Date of Enquiry </label>
+          <input
+            required                        
+            formControlName="doe"
+            type="date"
+            class="form-control"
+            id="doe"
+            aria-describedby="emailHelp"
+            placeholder="Date of Enquiry"
+          />          
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth </label>
+          <input
+            required                        
+            formControlName="dob"
+            type="date"
+            class="form-control"
+            id="dob"
+            aria-describedby="emailHelp"
+            placeholder="Date of Birth"
+          />          
+        </div>
+        <div class="form-group">
+          <label for="doj">Date of Join </label>
+          <input
+            required
+                        
+            formControlName="doj"
+            type="date"
+            class="form-control"
+            id="doj"
+            aria-describedby="emailHelp"
+            placeholder="Date of Birth"
+          />          
+        </div>
+        <div class="form-group">
+          <label for="course">Course </label>
+          <input
+            required
+                        
+            formControlName="course"
+            type="text"
+            class="form-control"
+            id="course"
+            aria-describedby="emailHelp"
+            placeholder="Date of Birth"
+          />          
+        </div>
+        <div class="form-group">
+          <label for="courseCompleted">Course Compoleted ? </label>
+          <input
+            required
+                        
+            formControlName="courseCompleted"
+            type="text"
+            class="form-control"
+            id="courseCompleted"
+            aria-describedby="emailHelp"
+            placeholder="Date of Birth"
+          />          
+        </div>
+
+
+
+
         <button
-          [disabled]="!registrationForm.valid"
+        [disabled]="!registrationForm.valid"
           type="submit"
           class="btn btn-primary"
         >

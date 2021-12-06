@@ -12,6 +12,9 @@ export class AuthService {
   setToken(token: string) {
     localStorage.setItem('x-auth-token', token);
   }
+
+
+  
   getToken(): string | null {
     return localStorage.getItem('x-auth-token');
   }
@@ -146,7 +149,28 @@ export class AuthService {
     });
   }
   getSpecificBatches(id):Observable<any>{
-    return this.http.get<any>(this.getBatches +"/"+id,{
+    return this.http.get<any>(this.getBatchesUrl+"/"+id,{
+      headers:new HttpHeaders({
+        'x-auth-token':this.token
+      })
+    })
+  }
+  createBatch(data):Observable<any>{
+    return this.http.post<any>(this.getBatchesUrl,data,{
+      headers:{
+        'x-auth-token':this.token
+      }
+    })
+  }
+  deleteBatch(id):Observable<any>{
+    return this.http.delete(this.getBatchesUrl + "/" + id,{
+      headers:new HttpHeaders({
+        'x-auth-token':this.token
+      })
+    })
+  }
+  updateBatch(data):Observable<any>{
+    return this.http.put<any>(this.getBatchesUrl,data,{
       headers:new HttpHeaders({
         'x-auth-token':this.token
       })
@@ -162,10 +186,42 @@ export class AuthService {
   // ***********************************************All methods about interviews
   getInterviews() {
 
-    return this.http.get(this.getInterviewsUrl,{
+    return this.http.get<any>(this.getInterviewsUrl,{
       headers:new HttpHeaders({
         'x-auth-token':this.token
       })
     });
   }
+  getSpecificInterview(id){
+    return this.http.get<any>(this.getInterviewsUrl +"/"+id,{
+      headers:new HttpHeaders({
+        'x-auth-token':this.token
+      })
+    })
+  }
+  updateInterview(data){
+    return this.http.put<any>(this.getInterviewsUrl,data,{
+      headers:new HttpHeaders({
+        'x-auth-token':this.token
+      })
+    })
+  }
+  deleteInterview(id){
+    return this.http.delete<any>(this.getInterviewsUrl+"/"+id,{
+      headers:new HttpHeaders({
+        'x-auth-token':this.token
+      })
+    })
+  }
+  createInterview(data){
+    return this.http.post<any>(this.getInterviewsUrl,data,{
+      headers:new HttpHeaders({
+        'x-auth-token':this.token
+      })
+    })
+  }
+
+
+
+
 }

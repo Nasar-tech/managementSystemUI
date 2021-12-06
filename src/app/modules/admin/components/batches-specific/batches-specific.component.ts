@@ -17,7 +17,8 @@ export class BatchesSpecificComponent implements OnInit {
     this.id=this.router.snapshot.paramMap.get("id");
 
     this.auth.getSpecificBatches(this.id).subscribe(response=>{
-      console.log(response);
+      console.log(response.message);
+      this.batch=response.message;
     },error=>{
       console.log(error);
     })

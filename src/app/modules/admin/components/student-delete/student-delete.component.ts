@@ -20,6 +20,7 @@ export class StudentDeleteComponent implements OnInit {
       this.router.navigate(['admin/students']);
     },error=>{
       console.log(error);
+      this.router.navigate(['admin/students']);
     })
   }
 

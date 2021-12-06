@@ -61,19 +61,28 @@ export class StudentAddComponent implements OnInit {
     password:['',[Validators.required,Validators.minLength(3)]],
     cpassword:['',[Validators.required,Validators.minLength(3)]],
     number:['',[Validators.required,Validators.minLength(3)]],
+    fatherName:['',[Validators.required]],
+    occupation:['',[Validators.required]],
+    sscpercentage:['',Validators.required],
+    interpercentage:['',Validators.required],
+    graduationpercentage:[''],
+    pgpercentage:[''],
+    doe:[''],
+    dob:[''],
+    doj:[''],
+    course:[''],
+    courseCompleted:['']
     
   },{validator:passwordValidator});
 
  
-  createStudent(){
+  createStudent(){    
     console.log(this.registrationForm.value);
-    this.auth.createStudent(this.registrationForm.value).subscribe(response=>{
-      console.log(response);      
-      this.route.navigate(['/admin/students']);
-    },error=>{
-      console.log(error);
-      
-    })
-    
+    // this.auth.createStudent(this.registrationForm.value).subscribe(response=>{
+    //   console.log(response);      
+    //   this.route.navigate(['/admin/students']);
+    // },error=>{
+    //   console.log(error);
+    // })    
   }
 }
