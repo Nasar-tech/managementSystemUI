@@ -1,0 +1,62 @@
+<br />
+<br />
+<br />
+<br />
+
+<p>student-fee works!</p>
+
+<div *ngIf="feeDetails" class="container">
+  <div class="row">
+    <div class="col-10">
+      <form #feeForm="ngForm" (ngSubmit)="updateFee()">
+
+
+        <div class="form-group">
+          <label for="totalfee">Total Fee</label>
+          <input
+            type="number"
+            (change)="totalfeeChange($event)"
+            name="totalfee"
+            [(ngModel)]="feeDetails.totalfee"
+            class="form-control"
+            id="totalfee"
+            aria-describedby="emailHelp"
+            placeholder="Total Amount"
+          />
+        </div>
+        
+        
+
+        <div class="form-group">
+          <label for="paidFee">Total Paid Fee</label>
+          <input
+          
+            type="number"
+            name="paidfee"
+            [(ngModel)]="feeDetails.paidfee"
+            max="totalfee"
+            class="form-control"
+            id="paidFee"
+            aria-describedby="emailHelp"
+            placeholder="Paid Fee"
+          />
+        </div>
+        <div class="form-group">
+          <label for="dueAmount">Due Amount</label>
+          <input
+            disabled
+            type="number"
+            name="duefee"
+            [(ngModel)]="feeDetails.duefee"
+            class="form-control"
+            id="dueAmount"
+            aria-describedby="emailHelp"
+            placeholder="Due Amount"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -4,19 +4,54 @@
 <br/>
 <br/>
 
-<div class="card" *ngIf="student">
-    <h5 class="card-header">student faculty Name : {{student.firstName}}</h5>
-    <div class="card-body">
-        <h5 class="card-title">Alloted Batches Id :  {{student.lastName}}</h5>
-        <h5 class="card-title">student Mobile Number : {{student.gender}}</h5>
-        <h5 class="card-title">student Date of Joining : {{student.qualification}}</h5>
-        <h5 class="card-title">student Date of Joining : {{student.address}}</h5>
-        <h5 class="card-title">student Date of Joining : {{student.email}}</h5>
-        <h5 class="card-title">student Date of Joining : {{student.role}}</h5>
-        <h5 class="card-title">student Date of Joining : {{student.number}}</h5>
-        
-      </div>
-     
-      {{student | json}}
-    
-  </div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-10">
+
+            
+            <div class="card" *ngIf="student">
+                
+                <div *ngIf="student.image">
+                    <h3>student image :</h3> <img src="http://localhost:3000/upload/photos/{{student.image.split('upload\\photos\\').pop()}}" />
+                </div>
+
+                <h4 class="card-header"><b>student Id : {{student.id}}</b><a class="btn btn-outline-info btn-lg float-right" routerLink="/admin/student/fee/{{id}}">FetchFee Details</a></h4>
+                <div class="card-body">
+                    <h4 class="card-title"><b>Student Name: {{student.firstName +" "}} {{student.lastName}}</b></h4>
+                    <h4 class="card-title"><b>student Gender : {{student.gender}}</b></h4>
+                    <h4 class="card-title"><b>Student Qualification : {{student.qualification}}</b></h4>
+                    <h4 class="card-title"><b>Studen Percentage : {{student.percentage}}</b></h4>
+                    <h4 class="card-title"><b>Passout: {{student.passout}}</b></h4>
+                    <h4 class="card-title"><b>Address : {{student.address}}</b></h4>
+                    <h4 class="card-title"><b>Number : {{student.number}}</b></h4>
+                    <h4 class="card-title"><b>Email : {{student.email}}</b></h4>
+                    <hr />
+                    <h4 class="card-title"><b>Father Name : {{student.fatherName}}</b></h4>
+                    <h4 class="card-title"><b>Father Occupation : {{student.occupation}}</b></h4>
+                    <h4 class="card-title"><b>ssc percentage : {{student.sscpercentage}}</b></h4>
+                    <h4 class="card-title"><b>intermediate or Equalent Percentage : {{student.interpercentage}}</b></h4>
+                    <h4 class="card-title"><b>graduation or (12+) percentage : {{student.graduationpercentage}}</b></h4>
+                    <h4 class="card-title"><b>Master (PG) Percentage : {{student.pgpercentage}}</b></h4>
+                    <hr />
+                    <h4 class="card-title"><b>Date of Enquiry : {{student.doe}}</b></h4>
+                    <h4 class="card-title"><b>Date of Birth : {{student.dob}}</b></h4>
+                    <h4 class="card-title"><b>Date of Joining : {{student.doj}}</b></h4>
+                    <h4 class="card-title"><b>Course  : {{student.course}}</b></h4>
+                    <h4 class="card-title"><b>Course Completed ? : {{student.courseCompleted}}</b></h4>
+                    <h4 class="card-title"><b>Placement  : {{student.placement}}</b></h4>
+                    <h4 class="card-title"><b>Placed Client : {{student.placementClient}}</b></h4>
+                </div>    
+            </div>
+            
+
+
+        </div>
+    </div>
+</div>
+
+
+
+

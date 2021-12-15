@@ -13,9 +13,7 @@ export class StudentsComponent implements OnInit {
 
   ngOnInit(): void {
     this.auth.getStudents().subscribe(response=>{
-      console.log(response.message);
       this.students=response.message;
-      
     })
   }
 

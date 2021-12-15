@@ -34,12 +34,15 @@ export class LoginComponent implements OnInit {
   formSubmit(){
     if(this.loginForm.valid){
       this.authService.login(this.loginForm.value).subscribe(
+
         response=>{
           console.log(response);
+
           if(!response.token){
             alert(response.message);
             return;
           }
+          
           const header=new HttpHeaders();
           header.set('x-auth-token',response.token);
           localStorage.setItem('x-auth-token',response.token);

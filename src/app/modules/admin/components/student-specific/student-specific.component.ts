@@ -15,6 +15,7 @@ export class StudentSpecificComponent implements OnInit {
   student:any;
   ngOnInit(): void {
     this.id=this.route.snapshot.paramMap.get('id');
+    
     this.auth.getStudentSpecific(this.id).subscribe(response=>{
       console.log(response);
       this.student=response.message;

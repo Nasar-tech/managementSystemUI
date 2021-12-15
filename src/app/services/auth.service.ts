@@ -9,6 +9,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class AuthService {
   constructor(private router: Router, private http: HttpClient) {}
+  
   setToken(token: string) {
     localStorage.setItem('x-auth-token', token);
   }
@@ -89,6 +90,27 @@ export class AuthService {
         })
       }  
     )
+  }
+  fetchFeeDetails(id):Observable<any>{
+    return this.http.get<any>(this.getStudentsUrl+"/fee/"+id,{
+      headers:new HttpHeaders({
+        'x-auth-token':this.token
+      })
+    })
+  }
+  updateFeeDetails(id,data):Observable<any>{
+    return this.http.put<any>(this.getStudentsUrl+"/fee/"+id,data,{
+      headers:new HttpHeaders({
+        'x-auth-token':this.token
+      })
+    })
+  }
+  createLog(id,data):Observable<any>{
+    return this.http.post<any>(this.getStudentsUrl+"/log/"+id,data,{
+      headers:new HttpHeaders({
+        'x-auth-token':this.token
+      })
+    })
   }
 
 

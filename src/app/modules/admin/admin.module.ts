@@ -29,6 +29,8 @@ import { InterviewAddComponent } from './components/interview-add/interview-add.
 import { InterviewDeleteComponent } from './components/interview-delete/interview-delete.component';
 import { InterviewEditComponent } from './components/interview-edit/interview-edit.component';
 import { InterviewSpecificComponent } from './components/interview-specific/interview-specific.component';
+import { StudentFeeComponent } from './components/student-fee/student-fee.component';
+import { StudentLogCreationComponent } from './components/student-log-creation/student-log-creation.component';
 
 
 
@@ -59,7 +61,9 @@ import { InterviewSpecificComponent } from './components/interview-specific/inte
     InterviewAddComponent,
     InterviewDeleteComponent,
     InterviewEditComponent,
-    InterviewSpecificComponent
+    InterviewSpecificComponent,
+    StudentFeeComponent,
+    StudentLogCreationComponent
   ],
   imports: [
     CommonModule,FormsModule,

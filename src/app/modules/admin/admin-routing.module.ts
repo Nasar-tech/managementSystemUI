@@ -22,8 +22,13 @@ import { ServicesComponent } from './components/services/services.component';
 import { StudentAddComponent } from './components/student-add/student-add.component';
 import { StudentDeleteComponent } from './components/student-delete/student-delete.component';
 import { StudentEditComponent } from './components/student-edit/student-edit.component';
+import { StudentFeeComponent } from './components/student-fee/student-fee.component';
 import { StudentSpecificComponent } from './components/student-specific/student-specific.component';
 import { StudentsComponent } from './components/students/students.component';
+
+
+
+
 
 const routes: Routes = [
   {path:"",component:AdminDashboardComponent,children:[
@@ -39,11 +44,14 @@ const routes: Routes = [
     {path:'faculty/:id',component:FacultyspecificComponent},
     {path:'facultyDelete/:id',component:FacultyDeleteComponent},
     {path:'facultyEdit/:id',component:FacultyEditComponent},
-    {path:'addFaculty',component:FacultyAddComponent},  
+    {path:'addFaculty',component:FacultyAddComponent},
+    
+    
 
     {path:'students',component:StudentsComponent},
     {path:'addStudent',component:StudentAddComponent},
     {path:'student/:id',component:StudentSpecificComponent},
+    {path:'student/fee/:id',component:StudentFeeComponent},
     {path:'studentDelete/:id',component:StudentDeleteComponent},
     {path:'studentEdit/:id',component:StudentEditComponent},
 

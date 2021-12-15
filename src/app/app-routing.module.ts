@@ -27,7 +27,6 @@ const routes: Routes = [
 
   {path:'admin',canActivate:[AuthGuardGuard],loadChildren:()=>import('./modules/admin/admin.module').then((m)=>m.AdminModule)},
 
-
   {path:'**',component:NotfoundComponent} 
 ];
 
